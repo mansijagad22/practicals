@@ -1,0 +1,162 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="entity.Address"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<style>
+
+.title{
+	text-align:center;	
+	
+}
+label{
+	font-weight:600;
+}
+.main-container{
+	width:100%;
+	display:flex;
+	justify-content:center;
+}
+.input{
+	height:	30px;
+	width:110%;
+	border:2px solid black;
+	border-radius:5px;
+	margin-left:10px;
+}
+.table-container{
+	border:1px solid black;
+	padding:50px;
+	border-radius:5px;
+}
+.submit-button{
+	margin:auto;
+	width:110%;
+	height:40px;
+}
+</style>
+
+
+
+<html>
+    <head>
+        <title>Add/Remove Input Fields Dynamically with jQuery</title>
+    </head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  ></script>
+		
+	
+	<!-- <script>
+	$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+   
+    var x = 1; //initlal text box count
+	
+	
+   $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+	
+		     //text box increment
+            $(wrapper).append('
+
+            		<tr>
+            					<td> <label for="street">Street : </label></td>
+            					<td><input type="text" name="street" class="input"/>
+            					<td>
+            				</tr>
+
+            				<tr>
+            					<td><label for="city">City :</label></td>
+            					<td><input type="text" name="city" class="input"/>
+            					<td>
+            				</tr>
+            				<tr>
+            					<td> <label for="state"> State:</label></td>
+            					<td><input type="text" name="state" class="input"/>
+            					<td>
+            				</tr>
+            				<tr>
+            					<td><label for="pincode">Pin Code :</label></td>
+            				<td><input type="text" name="pincode" class="input"/>
+            					<td>
+            				</tr>
+            				
+            						<tr>
+            						<td> &nbsp;</td>
+            					<td colspan="2"><input class="submit-button" type="submit" value="Save" /></td>
+            				</tr>
+            			'); //add input box
+            x++; 
+	  }
+    });
+   
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+       
+		e.preventDefault(); 
+		$(this).parent('div').remove(); 
+		x--;
+    })
+});
+	
+	</script>
+ -->	
+
+<!-- 
+
+
+<h2 class="title">Add Address  </h2>
+<div class="main-container">
+<script type ="text/javascript" src = "js/jquery-1.6.2.js"></script>
+<script type ="text/javascript" src = "js/jquery.validation.js"></script>
+<script type ="text/javascript">
+	$(document).ready(function(){
+		$('#saveaddress').validate({
+		rules:{
+		saveaddress:{
+		required:true;
+		minlength:1
+		});
+		
+	});
+	</script>
+-->
+
+<body>
+<form action="ProfileServletForAddEmpAddress" method="post" id = "saveaddress">
+<hr>
+<br>
+	<table class="table-container" align="center">
+
+<tr>
+			<td> <label for="street">Street : </label></td>
+			<td><input type="text" name="street" class="input"/>
+			<td>
+		</tr>
+
+		<tr>
+			<td><label for="city">City :</label></td>
+			<td><input type="text" name="city" class="input"/>
+			<td>
+		</tr>
+		<tr>
+			<td> <label for="state"> State:</label></td>
+			<td><input type="text" name="state" class="input"/>
+			<td>
+		</tr>
+		<tr>
+			<td><label for="pincode">Pin Code :</label></td>
+		<td><input type="text" name="pincode" class="input"/>
+			<td>
+		</tr>
+		
+				<tr>
+				<td> &nbsp;</td>
+			<td colspan="2"><input class="submit-button" type="submit" value="Save" /></td>
+		</tr>
+	</table>
+</form>
+</div>
+</body>
+</html>
+ -->
